@@ -9,10 +9,18 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Введите степень: ");
 int grade = Convert.ToInt32(Console.ReadLine());
-
-int numberR = 0;// Число в степени
+if(grade <= -1)
+    {
+        System.Console.WriteLine("Степень не является натуральным числом");
+        
+    }
+else
+{
+    int numberR = 0;// Число в степени
 for ( int round = 0; round < grade; round++ )
 {
     numberR = number * number;
 }
 Console.WriteLine($"Число {number} в степени {grade} равно : {numberR}");
+}
+
